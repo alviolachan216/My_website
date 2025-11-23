@@ -1,0 +1,938 @@
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A Portfolio Homepage">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<style>
+    /* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', sans-serif;
+  line-height: 1.5;
+  background-color: nude;
+  color: #333;
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar - Sticky and Enhanced Design */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar .logo a {
+  font-size: 1.9rem;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar .logo a:hover {
+  color: pink;
+}
+
+.navbar .nav-links ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar .nav-links ul li {
+  margin-left: 2rem;
+}
+
+.navbar .nav-links ul li a {
+  color: #fff;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar .nav-links ul li a:hover {
+  color: #00aaff;
+  transform: translateY(-5px);
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  width: 150%
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  padding-right: 50px;
+  position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backgroun-position: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content img {
+  max-width: 210px;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+  z-index: 2;
+
+}
+
+.hero-content  {
+  font-size: 4rem;
+  margin-bottom: 40px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content p {
+  font-size: 1.4rem;
+  margin-bottom: 50px;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.cta-btn {
+  padding: 15px 30px;
+  background-color: violet;
+  color: blue;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  box-shadow:0 0 20px
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.cta-btn:hover {
+  background-color: #0088cc;
+  transform: translateY(-5px);
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* About Section */
+.about {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: #666;
+}
+
+/* Projects Section */
+
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer .social-links a {
+  color: #fff;
+  margin: 0 15px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer .social-links a:hover {
+  color: #00aaff;
+}
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+
+
+
+
+/* Overall Section */
+.skills {
+  padding: 60px 20px;
+  background: #0d0d0d;
+  color: #fff;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.skills h2 {
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  text-shadow: 0 0 10px #0ff, 0 0 25px #0ff;
+}
+
+/* Container Layout */
+.skills-container {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+/* Each Skill Card */
+.skill {
+  background: #121212;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 15px #0ff3, 0 0 30px #000;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.skill:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px #0ff, 0 0 40px #0ff6;
+}
+
+/* Logo + Title */
+.skill-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.skill-header img {
+  width: 42px;
+  height: 42px;
+  filter: drop-shadow(0 0 5px #0ff);
+  transition: transform 0.3s ease;
+}
+
+.skill:hover .skill-header img {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 12px #0ff);
+}
+
+.skill h3 {
+  font-size: 1.4rem;
+  text-shadow: 0 0 10px #fff;
+}
+
+/* Description */
+.skill-desc {
+  font-size: 0.96rem;
+  color: #ccc;
+  margin: 8px 0 16px;
+  padding: 0 5px;
+  line-height: 1.5;
+  text-shadow: 0 0 5px #000;
+}
+
+/* Progress Bar */
+.skill-bar {
+  width: 100%;
+  height: 22px;
+  background: #1a1a1a;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: inset 0 0 6px #000;
+}
+.skill-progress.cpp {
+  width: 65%;
+  background-color: #00599C; /* C++ styled blue */
+}
+
+.skill-progress {
+  height: 100%;
+  line-height: 22px;
+  color: #000;
+  text-align: right;
+  padding-right: 10px;
+  font-weight: bold;
+  border-radius: 30px;
+  animation: grow 2s ease forwards;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Neon Skill Colors */
+.skill-progress.html   { width: 90%; background: #ff4c60; box-shadow: 0 0 10px #ff4c60; color: #fff; }
+.skill-progress.css    { width: 85%; background: #4c6cff; box-shadow: 0 0 10px #4c6cff; color: #fff; }
+.skill-progress.js     { width: 75%; background: #ffe14c; box-shadow: 0 0 10px #ffe14c; color: #000; }
+.skill-progress.react  { width: 70%; background: #61dafb; box-shadow: 0 0 10px #61dafb; color: #000; }
+.skill-progress.node   { width: 65%; background: #3c873a; box-shadow: 0 0 10px #3c873a; color: #fff; }
+
+/* Animation Keyframe */
+@keyframes grow {
+  from {
+    width: 0%;
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Touch */
+@media (max-width: 600px) {
+  .skill-header {
+    flex-direction: column;
+  }
+}
+
+  /* Contact Section Modern Style */
+.contact-modern {
+  background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+  padding: 4rem 2rem;
+  color: #e0f7fa;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 20px;
+  background: #121212;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+.contact-modern h2 {
+  font-size: 2.8rem;
+  color: #00ffff;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px #0ff;
+}
+
+.contact-intro {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: blue;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .form-row {
+    flex-direction: row;
+  }
+}
+
+.contact-form input,
+.contact-form textarea {
+  flex: 1;
+  padding: 1rem;
+  background: #1e1e1e;
+  border: 1px solid #00ffff;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 0 10px #00ffff;
+  outline: none;
+}
+
+.contact-form button {
+  padding: 0.9rem 2rem;
+  background: #00ffff;
+  color: #121212;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.contact-form button:hover {
+  background: #00cccc;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 1.5rem;
+}
+
+.social-icons a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  filter: drop-shadow(0 0 5px #00ffff);
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+  box-shadow: 0 0 15px #00ffff;
+}
+
+
+  /* Project Section */
+.projects-section {
+  background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+  padding: 5rem 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  color: #00ffff;
+  text-shadow: 0 0 15px #00ffff;
+  font-weight: 600;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Project Card Styling */
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 4px 20px rgba(0, 255, 255, 0.1),
+    0 2px 40px rgba(0, 255, 255, 0.05),
+    inset 0 0 10px rgba(255, 255, 255, 0.02);
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow:
+    0 10px 30px rgba(0, 255, 255, 0.25),
+    0 5px 60px rgba(0, 255, 255, 0.1),
+    inset 0 0 20px rgba(0, 255, 255, 0.05);
+}
+
+/* Project Image */
+.project-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: filter 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+  filter: brightness(1.1) contrast(1.05);
+}
+
+/* Project Details */
+.project-details {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.project-details h3 {
+  font-size: 1.5rem;
+  color: #00ffff;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px #00ffff50;
+  transition: color 0.3s ease;
+}
+
+.project-details p {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.project-card:hover .project-details p {
+  color: #eee;
+}
+
+/* Project Link Button */
+.project-link {
+  display: inline-block;
+  background: transparent;
+  color: #00ffff;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid #00ffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px #00ffff50;
+}
+
+.project-link:hover {
+  background: #00ffff;
+  color: #111;
+  box-shadow: 0 0 25px #00ffff;
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .projects-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .project-details h3 {
+    font-size: 1.3rem;
+  }
+}
+
+
+  .about-section {
+  background: linear-gradient(to bottom, #121212, #1f1f1f);
+  padding: 5rem 2rem;
+  color: #fff;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #00ffff;
+  box-shadow: 0 0 30px #00ffff88, 0 0 60px #00ffff44;
+  transition: transform 0.4s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+.about-text h2 {
+  font-size: 2.8rem;
+  color: #00ffff;
+  text-shadow: 0 0 12px #00ffffaa;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.about-text strong {
+  color: #00ffff;
+}
+
+.about-button {
+  display: inline-block;
+  background: absolute;
+  color: #00ffff;
+  padding: 0.7rem 1.4rem;
+  border: 2px solid #00ffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+  box-shadow: 0 0 12px #00ffff60;
+}
+
+.about-button:hover {
+  background: #00ffff;
+  color: #111;
+  box-shadow: 0 0 25px #00ffff;
+  transform: scale(1.05);
+}
+
+/* New Section for the Three Images with Larger Size */
+.about-images {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.about-image-item {
+  width: 32%;  /* Keeps images in a row */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image-item img {
+  width: 100%;
+  height: 350px;  /* Increased height for bigger images */
+  object-fit: cover;
+}
+
+.about-image-item:hover {
+  transform: scale(1.1);  /* Increased scale on hover */
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.25);
+}
+
+/* Mobile Responsiveness for Larger Images */
+@media (max-width: 768px) {
+  .about-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image-item {
+    width: 80%;
+    margin-bottom: 2rem;  /* Space between the images */
+  }
+
+  .about-image-item img {
+    height: 400px;  /* Adjust for mobile to maintain size */
+  }
+}
+
+
+</style>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="#"><img src="mydesign\static\img\logo.jpg" width="60px" height="60px" class="navlogo"></a>
+    </div>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+          <li><a href="#skill">skill</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Hi Welcome to my Website</h1>
+        <h2>I'm Princes Gargoles</h2>
+      <img src="{% static 'img/kkk.jpg' %}" alt="Profile Image">
+      <p>I'm a Graphic Designer. Let's create something amazing.</p>
+      <a href="#projects" class="cta-btn">View My Work</a>
+    </div>
+  </section>
+
+ <section id="about" class="about-section">
+  <div class="about-container">
+    <div class="about-image">
+      <img src="{% static 'img/pic.jpg' %}" alt="Profile Image">
+    </div>
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>Hello! I'm <strong>Athena Kathlaine Magbanua</strong>, I'm amazing—I'm a sporty college girl studying tourism, and I absolutely love pageantry, dancing, and singing. I'm also an adorable daughter who brings a lot of joy to everyone around me. I’ve got the perfect mix of talent, cuteness, and energy!</p>
+      <a href="#contact" class="about-button">Let's Connect</a>
+    </div>
+  </div>
+  <!-- Three Images Below -->
+  <div class="about-images">
+    <div class="about-image-item">
+      <img src="{% static 'img/yow.jpg' %}" alt=" width="50px" height="50px" class="about-image"></a>
+    </div>
+    <div class="about-image-item">
+      <img src="{% static 'img/hey.jpg' %}" alt="Project Image 2">
+    </div>
+    <div class="about-image-item">
+      <img src="{% static 'img/hii.jpg' %}" alt="Project Image 3">
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Projects Section -->
+<section id="projects" class="projects-section">
+  <h2>Featured Projects</h2>
+  <div class="project-grid">
+    <!-- Project Card 1 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="{% static 'img/pic1.jpg' %}" alt="Project 1">
+      </div>
+      <div class="project-details">
+        <h3>Polygonal Portrait</h3>
+        <p>A polygonal portrait is a stylized artwork created by forming an image using geometric polygons, often triangles, to give a modern, faceted look. In Adobe Illustrator, this effect is achieved by manually tracing key facial features with the Pen Tool or using the Polygon Tool, then applying flat colors or gradients to each shape. The result is a visually striking and abstract portrait that emphasizes structure, light, and form in a creative, digital way.</p>
+        <a href="#" class="project-link">View Project</a>
+      </div>
+    </div>
+
+    <!-- Project Card 2 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="{% static 'img/pic2.jpg' %}" alt="Project 2">
+      </div>
+      <div class="project-details">
+        <h3>Banner</h3>
+        <p>A poster in Adobe Photoshop is a visually compelling design created to convey a message, promote an event, or showcase a product. Using Photoshop’s powerful tools, such as layers, text effects, brushes, and image editing features, designers can combine graphics, photos, and typography into a high-quality composition. Posters can be customized with vibrant colors, creative layouts, and special effects to grab attention and communicate effectively.</p>
+        <a href="#" class="project-link">View Project</a>
+      </div>
+    </div>
+
+    <!-- Project Card 3 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="{% static 'img/pic3.jpg' %}" alt="Project 3">
+      </div>
+      <div class="project-details">
+        <h3>Movie Poster</h3>
+        <p>Creating a movie poster in Adobe Photoshop involves combining visual storytelling with design elements to capture the essence of a film. Using tools like layer masks, blending modes, and typography, designers can blend images, add dramatic lighting, and include key text such as the title, tagline, and credits. Photoshop’s flexibility allows for creative compositions that reflect the film’s mood, genre, and theme, resulting in a striking and professional-looking movie poster.</p>
+        <a href="#" class="project-link">View Project</a>
+      </div>
+    </div>
+
+    <!-- Project Card 4 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="{% static 'img/pic4.jpg' %}" alt="Project 4">
+      </div>
+      <div class="project-details">
+        <h3>Sales Banner</h3>
+        <p>A sales banner in Adobe Photoshop is a promotional graphic designed to highlight special offers, discounts, or products. Using tools like text effects, shapes, images, and smart objects, designers can create eye-catching banners with bold typography and vibrant colors to grab attention. Photoshop allows full customization, making it easy to align the design with a brand’s identity and effectively drive customer interest and engagement.</p>
+        <a href="#" class="project-link">View Project</a>
+      </div>
+    </div>
+     <!-- Project Card 5 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="{% static 'img/pic5.png' %}" alt="Project 5">
+      </div>
+      <div class="project-details">
+        <h3>Creating Logo</h3>
+        <p>Creating a logo in Adobe Photoshop involves designing a unique visual symbol that represents a brand or business. Using tools like shapes, the Pen Tool, layer styles, and text options, designers can craft detailed and creative logos with customized fonts, colors, and effects. While Photoshop is pixel-based, it offers flexibility for designing logos with rich textures and styles, making it ideal for web and digital use.</p>
+        <a href="#" class="project-link">View Project</a>
+      </div>
+    </div>
+     <!-- Project Card 6 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="{% static 'img/pic6.png' %}" alt="Project 4">
+      </div>
+      <div class="project-details">
+        <h3>Creating Vector-Based Artwork</h3>
+        <p>Drawing in Adobe Illustrator is the process of creating vector-based artwork using precise tools like the Pen Tool, Brush Tool, and Shape Tools. Illustrator allows artists to draw clean, scalable designs that retain sharpness at any size. Whether creating logos, illustrations, or custom artwork, Illustrator's powerful features, such as paths, anchor points, and layers, enable detailed control over shapes, colors, and gradients. This makes it ideal for creating high-quality, professional graphics for both print and digital media.</p>
+        <a href="#" class="project-link">View Project</a>
+
+
+</section>
+
+
+  <!-- Contact Section -->
+ <!-- Contact Me Section -->
+<section id="contact" class="contact-modern">
+  <div class="contact-container">
+    <h2>Let's Connect</h2>
+    <p class="contact-intro">Have a project in mind or just want to say hi? Drop me a message!</p>
+
+    <form class="contact-form" action="#" method="post">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+      </div>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="social-icons">
+      <a href="https://github.com/" target="_blank" title="GitHub">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+      </a>
+      <a href="https://linkedin.com/" target="_blank" title="LinkedIn">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+      </a>
+      <a href="mailto:your-email@example.com" title="Email">
+        <img src="https://img.icons8.com/fluency/48/apple-mail.png" alt="Email">
+      </a>
+      <a href="https://behance.net/" target="_blank" title="Behance">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/behance/behance-original.svg" alt="Behance">
+      </a>
+      <a href="https://instagram.com/" target="_blank" title="Instagram">
+        <img src="https://img.icons8.com/fluency/48/instagram-new.png" alt="Instagram">
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="skills" class="skills">
+  <h2>My Skills</h2>
+  <div class="skills-container">
+
+    <!-- Skill 1 -->
+    <div class="skill">
+      <div class="skill-header">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+        <h3>HTML</h3>
+      </div>
+      <p class="skill-desc">I use HTML to structure content with semantic elements and accessibility in mind.</p>
+      <div class="skill-bar">
+        <div class="skill-progress html">90%</div>
+      </div>
+    </div>
+
+    <!-- Skill 2 -->
+    <div class="skill">
+      <div class="skill-header">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+        <h3>CSS</h3>
+      </div>
+      <p class="skill-desc">Skilled in creating responsive, beautiful layouts with transitions and effects.</p>
+      <div class="skill-bar">
+        <div class="skill-progress css">85%</div>
+      </div>
+    </div>
+
+    <!-- Skill 3 -->
+    <div class="skill">
+      <div class="skill-header">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+        <h3>JavaScript</h3>
+      </div>
+      <p class="skill-desc">I build dynamic, interactive UI components and handle DOM manipulation with ease.</p>
+      <div class="skill-bar">
+        <div class="skill-progress js">75%</div>
+      </div>
+    </div>
+
+    <!-- Skill 4 -->
+    <div class="skill">
+      <div class="skill-header">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+        <h3>React</h3>
+      </div>
+      <p class="skill-desc">Developing modular apps using components, hooks, and state management.</p>
+      <div class="skill-bar">
+        <div class="skill-progress react">70%</div>
+      </div>
+    </div>
+
+    <!-- Skill 5 -->
+    <div class="skill">
+      <div class="skill-header">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+        <h3>Node.js</h3>
+      </div>
+      <p class="skill-desc">Creating backends, APIs, and server-side logic with Express and MongoDB.</p>
+      <div class="skill-bar">
+        <div class="skill-progress node">65%</div>
+      </div>
+    </div>
+    <!-- Skill 5 -->
+<div class="skill">
+  <div class="skill-header">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+    <h3>C++</h3>
+  </div>
+  <p class="skill-desc">Building high-performance applications and mastering object-oriented programming in C++.</p>
+  <div class="skill-bar">
+    <div class="skill-progress cpp">65%</div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 [Your Name]. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

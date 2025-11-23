@@ -1,0 +1,1102 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A Portfolio Homepage">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<style>
+    /* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', sans-serif;
+  line-height: 1.5;
+  background-color: #fce9d7;
+  color: #333;
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar - Sticky and Enhanced Design */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar .logo a {
+  font-size: 1.9rem;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar .logo a:hover {
+  color: pink;
+}
+
+.navbar .nav-links ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar .nav-links ul li {
+  margin-left: 2rem;
+}
+
+.navbar .nav-links ul li a {
+  color: #fff;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar .nav-links ul li a:hover {
+  color: orangered;
+  transform: translateY(-5px);
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  width: 150%
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  padding-right: 50px;
+  position: relative;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 2s ease-in-out;
+    background-color: black;
+}
+
+.hero-content img {
+  max-width: 210px;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+  z-index: 2;
+
+}
+
+.hero-content  {
+  font-size: 4rem;
+  margin-bottom: 40px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content p {
+  font-size: 1.4rem;
+  margin-bottom: 50px;
+  animation: fadeIn 3s ease-in-out;
+  color: orangered;
+}
+
+.cta-btn {
+  padding: 15px 30px;
+  background-color: orangered;
+  color: blue;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  box-shadow:0 0 20px;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.cta-btn:hover {
+  background-color: #0088cc;
+  transform: translateY(-5px);
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* About Section */
+.about {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: #666;
+}
+
+/* Projects Section */
+
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer .social-links a {
+  color: #fff;
+  margin: 0 15px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer .social-links a:hover {
+  color: orangered;
+}
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+
+
+
+
+/* Overall Section */
+.skills {
+  padding: 60px 20px;
+  background: #0d0d0d;
+  color: #fff;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.skills h2 {
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  text-shadow: 0 0 10px #0ff, 0 0 25px #0ff;
+  color: orangered;
+}
+
+/* Container Layout */
+.skills-container {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+/* Each Skill Card */
+.skill {
+  background: #121212;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 15px #0ff3, 0 0 30px #000;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+}
+
+.skill:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px orangered, 0 0 40px orangered;
+
+}
+
+/* Logo + Title */
+.skill-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.skill-header img {
+  width: 42px;
+  height: 42px;
+  filter: drop-shadow(0 0 5px #0ff);
+  transition: transform 0.3s ease;
+}
+
+.skill:hover .skill-header img {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 12px #0ff);
+
+
+  content:"";
+    height: 300%;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 120%;
+    z-index: -9;
+    transition: all 0.5s;
+    opacity: 0;
+    background: #34495e;
+}
+
+.skill h3 {
+  font-size: 1.4rem;
+  text-shadow: 0 0 10px #fff;
+}
+
+/* Description */
+.skill-desc {
+  font-size: 0.96rem;
+  color: #ccc;
+  margin: 8px 0 16px;
+  padding: 0 5px;
+  line-height: 1.5;
+  text-shadow: 0 0 5px #000;
+}
+
+/* Progress Bar */
+.circle-wrapper {
+  width: 100%;
+  height: 22px;
+  background: #1a1a1a;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: inset 0 0 6px #000;
+}
+.skill-progress.cpp {
+  width: 65%;
+  background-color: #00599C; /* C++ styled blue */
+}
+
+.skill-progress {
+  height: 100%;
+  line-height: 22px;
+  color: #000;
+  text-align: right;
+  padding-right: 10px;
+  font-weight: bold;
+  border-radius: 30px;
+  animation: grow 2s ease forwards;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Neon Skill Colors */
+.skill-progress.html   { width: 90%; background: #ff4c60; box-shadow: 0 0 10px #ff4c60; color: #fff; }
+.skill-progress.css    { width: 85%; background: #4c6cff; box-shadow: 0 0 10px #4c6cff; color: #fff; }
+.skill-progress.js     { width: 75%; background: #ffe14c; box-shadow: 0 0 10px #ffe14c; color: #000; }
+.skill-progress.react  { width: 70%; background: #61dafb; box-shadow: 0 0 10px #61dafb; color: #000; }
+.skill-progress.node   { width: 65%; background: #3c873a; box-shadow: 0 0 10px #3c873a; color: #fff; }
+
+/* Animation Keyframe */
+@keyframes grow {
+  from {
+    width: 0%;
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Touch */
+@media (max-width: 600px) {
+  .skill-header {
+    flex-direction: column;
+  }
+}
+
+.circle-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 15px;
+}
+
+.circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(#0ff 0%, #222 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 0 10px #0ff6;
+}
+
+.circle::before {
+  content: '';
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  background: #121212;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.percentage {
+  position: relative;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  z-index: 2;
+}
+
+
+  /* Contact Section Modern Style */
+.contact-modern {
+  background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+  padding: 4rem 2rem;
+  color: #e0f7fa;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 20px;
+  background: #121212;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+.contact-modern h2 {
+  font-size: 2.8rem;
+  color: orangered;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px #0ff;
+}
+
+.contact-intro {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: blue;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .form-row {
+    flex-direction: row;
+  }
+}
+
+.contact-form input,
+.contact-form textarea {
+  flex: 1;
+  padding: 1rem;
+  background: #1e1e1e;
+  border: 1px solid orangered;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 0 10px orangered;
+  outline: none;
+}
+
+.contact-form button {
+  padding: 0.9rem 2rem;
+  background: orangered;
+  color: #121212;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.contact-form button:hover {
+  background: #00cccc;
+  box-shadow: 0 0 10px orangered;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 1.5rem;
+}
+
+.social-icons a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  filter: drop-shadow(0 0 5px orangered);
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+  box-shadow: 0 0 15px orangered;
+}
+
+
+  /* Project Section */
+.projects-section {
+  background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+  padding: 5rem 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  color: orangered;
+  text-shadow: 0 0 15px orangered;
+  font-weight: 600;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Project Card Styling */
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 4px 20px rgba(0, 255, 255, 0.1),
+    0 2px 40px rgba(0, 255, 255, 0.05),
+    inset 0 0 10px rgba(255, 255, 255, 0.02);
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow:
+    0 10px 30px rgba(0, 255, 255, 0.25),
+    0 5px 60px rgba(0, 255, 255, 0.1),
+    inset 0 0 20px rgba(0, 255, 255, 0.05);
+}
+
+/* Project Image */
+.project-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: filter 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+  filter: brightness(1.1) contrast(1.05);
+}
+
+/* Project Details */
+.project-details {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.project-details h3 {
+  font-size: 1.5rem;
+  color: orangered;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px orangered50;
+  transition: color 0.3s ease;
+}
+
+.project-details p {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.project-card:hover .project-details p {
+  color: #eee;
+}
+
+/* Project Link Button */
+.project-link {
+  display: inline-block;
+  background: transparent;
+  color: orangered;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid orangered;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px orangered50;
+}
+
+.project-link:hover {
+  background: orangered;
+  color: #111;
+  box-shadow: 0 0 25px orangered;
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .projects-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .project-details h3 {
+    font-size: 1.3rem;
+  }
+}
+
+
+  .about-section {
+  background: linear-gradient(to bottom, #121212, #1f1f1f);
+  padding: 5rem 2rem;
+  color: #fff;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid orangered;
+  box-shadow: 0 0 30px orangered88, 0 0 60px orangered44;
+  transition: transform 0.4s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+.about-text h2 {
+  font-size: 2.8rem;
+  color: orangered;
+  text-shadow: 0 0 12px orangeredaa;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.about-text strong {
+  color: orangered;
+}
+
+.about-button {
+  display: inline-block;
+  background: absolute;
+  color: orangered;
+  padding: 0.7rem 1.4rem;
+  border: 2px solid orangered;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+  box-shadow: 0 0 12px orangered60;
+}
+
+.about-button:hover {
+  background: orangered;
+  color: #111;
+  box-shadow: 0 0 25px orangered;
+  transform: scale(1.05);
+}
+
+/* New Section for the Three Images with Larger Size */
+.about-images {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.about-image-item {
+  width: 32%;  /* Keeps images in a row */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image-item img {
+  width: 100%;
+  height: 350px;  /* Increased height for bigger images */
+  object-fit: cover;
+}
+
+.about-image-item:hover {
+  transform: scale(1.1);  /* Increased scale on hover */
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.25);
+}
+
+/* Mobile Responsiveness for Larger Images */
+@media (max-width: 768px) {
+  .about-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image-item {
+    width: 80%;
+    margin-bottom: 2rem;  /* Space between the images */
+  }
+
+  .about-image-item img {
+    height: 400px;  /* Adjust for mobile to maintain size */
+  }
+
+  #typing-text {
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid orange;
+    width: fit-content;
+  }
+
+  @keyframes blink {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: orange; }
+  }
+
+  #typing-text {
+    animation: blink 0.75s step-end infinite;
+  }
+
+}
+
+</style>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="#"><img src="\Alviola_porfolio\mydesign\static\img\logo-removebg-preview.png" width="60px" height="60px" class="navlogo"></a>
+    </div>
+    <nav class="nav-links">
+
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#Hobbies">Hobbies</a></li>
+        <li><a href="#contact">Contact</a></li>
+          <li><a href="#skills">skill</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1></h1>
+        <h2 id="typing-text"></h2>
+      <img src="\Alviola_porfolio\mydesign\static\img\download.jpg" alt="Profile Image">
+      <p>Let's create something amazing.</p>
+      <a href="#projects" class="cta-btn">View My Work</a>
+    </div>
+  </section>
+
+ <section id="about" class="about-section">
+  <div class="about-container">
+    <div class="about-image">
+      <img src="\Alviola_porfolio\mydesign\static\img\picture.jpg" alt="Profile Image">
+    </div>
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>Hello! I'm <strong>Christian J. Alviola</strong>, I'm just a simple man — humble, kind, and always staying true to myself. I enjoy playing all kinds of sports, meeting new people, and discovering new places. Whether I'm on the court, exploring the outdoors, or traveling to new destinations, I try to embrace every moment with a positive attitude and an open heart. Life's an adventure, and I'm always ready for the next chapter.</p>
+      
+      <a href="#contact" class="about-button">Let's Connect</a>
+    </div>
+  </div>
+  <!-- Three Images Below -->
+  <div class="about-images">
+    <div class="about-image-item">
+      <img src="\Alviola_porfolio\mydesign\static\img\IMG_2553.jpg" alt="" width="50px" height="50px" class="about-image">
+    </div>
+    <div class="about-image-item">
+      <img src="\Alviola_porfolio\mydesign\static\img\pp.jpg" alt="Project Image 2">
+    </div>
+    <div class="about-image-item">
+      <img src="\Alviola_porfolio\mydesign\static\img\IMG_4491.jpg" alt="Project Image 3">
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Projects Section -->
+<section id="Hobbies" class="projects-section">
+  <h2>My Hobbies</h2>
+  <div class="project-grid">
+    <!-- Project Card 1 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="\Alviola_porfolio\pythoncess\mydesign\static\img\basketball.jpg" alt="Project 1">
+      </div>
+      <div class="project-details">
+        <h3>Basketball</h3>
+        <p>Playing basketball keeps me active, helps me relieve stress, and allows me to bond with friends. I enjoy the fast pace of the game, the teamwork involved, and the thrill of making a good shot or a smart play. It's a fun way to challenge myself and improve every time I play.</p>
+        <a href="#" class="project-link">View Project</a>
+      </div>
+    </div>
+
+    <!-- Project Card 2 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="\Alviola_porfolio\pythoncess\mydesign\static\img\bike.jpg" alt="Project 2">
+      </div>
+      <div class="project-details">
+        <h3>Biking</h3>
+        <p>Biking gives me a sense of freedom and adventure. It's a fun way to explore new places, stay healthy, and clear my mind. Whether I'm riding alone or with friends, biking helps me relax and enjoy the outdoors.</p>
+        <a href="#" class="project-link">View Project</a>
+      </div>
+    </div>
+
+    <!-- Project Card 3 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="\Alviola_porfolio\pythoncess\mydesign\static\img\camping.jpg" alt="Project 3">
+      </div>
+      <div class="project-details">
+        <h3>Camping</h3>
+        <p>Camping lets me disconnect from the busy world and enjoy nature. I love the peacefulness of being outdoors, sitting around a campfire, and sleeping under the stars. It's a great way to relax, bond with others, and create lasting memories.</p>
+        <a href="#" class="project-link">View Project</a>
+      </div>
+    </div>
+
+    <!-- Project Card 4 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="\Alviola_porfolio\pythoncess\mydesign\static\img\football.jpg" alt="Project 4">
+      </div>
+      <div class="project-details">
+        <h3>Football</h3>
+        <p>Football is the first sport I ever played, starting way back in grade 2. It taught me teamwork, discipline, and how to never give up. I enjoy the energy of the game, the excitement of scoring goals, and the bond I’ve built with teammates over the years. Football will always have a special place in my heart.</p>
+        <a href="#" class="project-link">View Project</a>
+      </div>
+    </div>
+     <!-- Project Card 5 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="\Alviola_porfolio\pythoncess\mydesign\static\img\land survey.jpg" alt="Project 5">
+      </div>
+      <div class="project-details">
+        <h3>Land Surveying</h3>
+        <p>Land surveying, especially geodetic surveying, because it became more than just a skill—it turned into a hobby and a source of income. It helps me support my needs in school by providing allowance, and I enjoy the work because it involves being outdoors, using technical tools, and learning more about land measurements. It's something I’m proud of and passionate about.</p>
+        <a href="#" class="project-link">View Project</a>
+      </div>
+    </div>
+     <!-- Project Card 6 -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="\Alviola_porfolio\pythoncess\mydesign\static\img\IMG_2627.jpg" alt="Project 4">
+      </div>
+      <div class="project-details">
+        <h3>Hiking</h3>
+        <p>Hiking allows me to connect with nature and escape from the stress of everyday life. Reaching the top of a trail feels rewarding, and I enjoy the peaceful views and fresh air along the way. It’s also a great way to stay active, clear my mind, and appreciate the beauty of the outdoors.</p>
+        <a href="#" class="project-link">View Project</a>
+         </div>
+       </div>
+     </div>
+
+
+</section>
+
+
+  <!-- Contact Section -->
+ <!-- Contact Me Section -->
+<section id="contact" class="contact-modern">
+  <div class="contact-container">
+    <h2>Let's Connect</h2>
+    <p class="contact-intro">Have a project in mind or just want to say hi? Drop me a message!</p>
+
+    <form class="contact-form" action="#" method="post">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+      </div>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="social-icons">
+      <a href="https://github.com/" target="_blank" title="GitHub">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+      </a>
+      <a href="https://linkedin.com/" target="_blank" title="LinkedIn">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+      </a>
+      <a href="mailto:your-email@example.com" title="Email">
+        <img src="https://img.icons8.com/fluency/48/apple-mail.png" alt="Email">
+      </a>
+      <a href="https://behance.net/" target="_blank" title="Behance">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/behance/behance-original.svg" alt="Behance">
+      </a>
+      <a href="https://instagram.com/" target="_blank" title="Instagram">
+        <img src="https://img.icons8.com/fluency/48/instagram-new.png" alt="Instagram">
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="skills" class="skills">
+  <h2>My Skills</h2>
+  <div class="skills-container">
+
+    <!-- Skill 1 -->
+    <div class="skill">
+      <div class="skill-header">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+        <h3>HTML</h3>
+      </div>
+      <p class="skill-desc">I use HTML to structure content with semantic elements and accessibility in mind.</p>
+      <div class="circle-wrapper html" data-percentage="70">
+  <div class="circle">
+    <span class="percentage">70%</span>
+  </div>
+</div>
+
+    </div>
+
+    <!-- Skill 2 -->
+    <div class="skill">
+      <div class="skill-header">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+        <h3>CSS</h3>
+      </div>
+      <p class="skill-desc">Skilled in creating responsive, beautiful layouts with transitions and effects.</p>
+      <div class="circle-wrapper css" data-percentage="65">
+  <div class="circle">
+    <span class="percentage">65%</span>
+  </div>
+</div>
+
+    </div>
+
+    <!-- Skill 3 -->
+    <div class="skill">
+      <div class="skill-header">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+        <h3>JavaScript</h3>
+      </div>
+      <p class="skill-desc">I build dynamic, interactive UI components and handle DOM manipulation with ease.</p>
+     <div class="circle-wrapper js" data-percentage="55">
+  <div class="circle">
+    <span class="percentage">55%</span>
+  </div>
+</div>
+
+    </div>
+
+    <!-- Skill 4 -->
+    <div class="skill">
+      <div class="skill-header">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+        <h3>React</h3>
+      </div>
+      <p class="skill-desc">Developing modular apps using components, hooks, and state management.</p>
+      <div class="circle-wrapper react" data-percentage="50">
+  <div class="circle">
+    <span class="percentage">50%</span>
+  </div>
+</div>
+
+    </div>
+
+    <!-- Skill 5 -->
+    <div class="skill">
+      <div class="skill-header">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+        <h3>Node.js</h3>
+      </div>
+      <p class="skill-desc">Creating backends, APIs, and server-side logic with Express and MongoDB.</p>
+     <div class="circle-wrapper node" data-percentage="45">
+  <div class="circle">
+    <span class="percentage">45%</span>
+  </div>
+</div>
+
+    </div>
+    <!-- Skill 5 -->
+<div class="skill">
+  <div class="skill-header">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+    <h3>C++</h3>
+  </div>
+  <p class="skill-desc">Building high-performance applications and mastering object-oriented programming in C++.</p>
+  <div class="circle-wrapper cpp" data-percentage="53">
+  <div class="circle">
+    <span class="percentage">53%</span>
+  </div>
+</div>
+
+</div>
+
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Christian Alviola. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Twitter</a>
+    </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+<script>
+  const texts = [
+    "I'm Christian Aviola.",
+    "Welcome to my portfolio website."
+  ];
+
+  const typingText = document.getElementById("typing-text");
+  let textIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function typeLoop() {
+    const currentText = texts[textIndex];
+    if (isDeleting) {
+      typingText.innerHTML = currentText.substring(0, charIndex--);
+    } else {
+      typingText.innerHTML = currentText.substring(0, charIndex++);
+    }
+
+    let speed = isDeleting ? 50 : 100;
+
+    if (!isDeleting && charIndex === currentText.length) {
+      speed = 1500; // pause at end of sentence
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      textIndex = (textIndex + 1) % texts.length;
+      speed = 500;
+    }
+
+    setTimeout(typeLoop, speed);
+  }
+
+  window.onload = typeLoop;
+
+   const skillColors = {
+    html: '#ff4c60',
+    css: '#4c6cff',
+    js: '#ffe14c',
+    react: '#61dafb',
+    node: '#3c873a',
+    cpp: '#00599C'
+  };
+
+  document.querySelectorAll('.circle-wrapper').forEach(wrapper => {
+    const finalPercent = parseInt(wrapper.getAttribute('data-percentage'));
+    const circle = wrapper.querySelector('.circle');
+    const percentageText = wrapper.querySelector('.percentage');
+    const skillClass = [...wrapper.classList].find(cls => skillColors[cls]);
+    const color = skillColors[skillClass] || '#0ff';
+
+    let currentPercent = 0;
+    const speed = 10;
+
+    const updateProgress = () => {
+      if (currentPercent <= finalPercent) {
+        circle.style.background = `conic-gradient(${color} ${currentPercent}%, #222 ${currentPercent}% 100%)`;
+        percentageText.textContent = `${currentPercent}%`;
+        currentPercent++;
+        setTimeout(updateProgress, speed);
+      }
+    };
+
+    updateProgress();
+  });
+</script>
+
+
+</body>
+</html>
